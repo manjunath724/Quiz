@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Questions</th>
+      <th><%= link_to 'Quiz', Quiz.all.sample %></th>
+      <th colspan="2"><%= link_to 'New Quiz', new_quiz_path %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quizzes.each.with_index(1) do |quiz, i| %>
+      <tr>
+        <td><%= i %></td>
+        <td><%= quiz.question %></td>
+        <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
+        <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

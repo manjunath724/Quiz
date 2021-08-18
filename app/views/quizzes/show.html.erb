@@ -1,0 +1,11 @@
+<%= link_to '< Back', quizzes_path %>
+
+<center>
+  <p>
+    <h1><%= @quiz.question %></h1>
+  </p>
+
+  <%= link_to '< Prev', quiz_url(@quiz.id - 1) %>
+  <%= link_to 'Random', quiz_url(Quiz.all.sample) %>
+  <%= link_to 'Next >', quiz_url(@quiz.id + 1) %>
+</center>
