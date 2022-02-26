@@ -51,3 +51,5 @@ rails db:seed
 ```
 rails s
 ```
+
+Thank you!
